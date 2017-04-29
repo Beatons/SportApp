@@ -1,0 +1,44 @@
+<ion-content class="login-content" padding>
+   <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img class="login-img" src="../../assets/img-custom/logoLow.png" />
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+        <form (ngSubmit)="login(usercreds)" #loginForm="ngForm">
+
+     <ion-row>
+          <ion-col>
+            <ion-list>
+
+              <ion-item>
+                <ion-label>Email:</ion-label>
+                <ion-input  name="email" [(ngModel)] = "usercreds.email" required type="text" value=""></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Password:</ion-label>
+                <ion-input name="password" [(ngModel)] = "usercreds.password" required type="password"></ion-input>
+              </ion-item>
+
+            </ion-list>
+   </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+  <button color="secondary" icon-only block [disabled]="!loginForm.form.valid"  ion-button type="submit"><ion-icon name="unlock"> </ion-icon> Login</button>
+  </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+  <button ion-button icon-only block color="secondary" class="register-btn" (click)="signup()"><ion-icon name="person-add"></ion-icon>
+  Create New Account
+  </button>
+   </ion-col>
+        </ion-row>
+
+    </form>
+  </div>
+</ion-content>

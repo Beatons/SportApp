@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="dark">
+    <ion-title>{{ username }}</ion-title>
+
+    <ion-buttons end>
+     <button icon-only ion-button menuToggle><ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+</ion-header>
+<ion-content class="page-front" padding>
+
+   <ion-list>
+     <button ion-item (click)="newSeason()">
+       My last matches
+     </button>
+   <!--<button ion-button class="" (click)="logout()">Logout
+    </button>-->
+
+    <!--   <button ion-item *ngFor="let item of items" (click)="openSeason({{ seasonId }})">
+       {{ Season.name }}
+     </button> -->
+
+   </ion-list>
+
+
+  <!-- <br />
+   <button ion-button icon-only color="secondary" class="submit-btn" ><ion-icon name="alert"></ion-icon><br /></button>
+   <button ion-button icon-only color="danger" class="submit-btn" ><ion-icon name="search"></ion-icon><br /> </button><br />
+   <button ion-button icon-only color="primary" class="submit-btn" ><ion-icon name="chatboxes"></ion-icon><br /></button>
+   <button ion-button icon-only color="dark" class="submit-btn" ><ion-icon name="calendar"></ion-icon><br /></button>
+ -->
+ </ion-content>
