@@ -1,3 +1,12 @@
 page-start-game {
 
+ .timer-button {
+    font-size: 3rem !important;
+    height: 1em !important;
+    color:#fff;
+  }
+  
+  .no-bottom-border.item .item-inner {
+      border-bottom: none !important;
+  }
 }

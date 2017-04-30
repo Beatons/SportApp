@@ -6,13 +6,45 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Time:</ion-title>
+  <ion-navbar color="dark" *ngIf="timer">
+    <ion-title>
+
+        <ion-row>
+          <ion-col>
+        <button ion-button *ngIf="timeInSeconds && timeInSeconds > 0" large full clear class="timer-button timer-text">{{timer.displayTime}}</button>
+          </ion-col>
+       
+           <ion-col text-right>
+             <!--
+        <button ion-button icon-left clear color="light" small (click)="initTimer()" item-content *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">
+            <ion-icon name="refresh"></ion-icon>
+            Reset
+        </button>
+        -->
+        <button ion-button icon-left clear small color="light" (click)="pauseTimer()" item-right *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">
+            <ion-icon name="pause"></ion-icon>
+            Pause
+        </button>      
+        <button ion-button icon-left clear small color="light" (click)="resumeTimer()" item-right *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">
+            <ion-icon name="play"></ion-icon>
+            Resume
+        </button>      
+        <button text-right ion-button icon-left clear small color="light" (click)="startTimer()" item-right *ngIf="!timer.hasStarted">
+            <ion-icon name="play"></ion-icon>
+            Start
+        </button>
+           </ion-col>
+                   
+    </ion-row> 
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+
+ <h2>TIME COUNT</h2>
 
 </ion-content>

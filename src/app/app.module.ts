@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
+import { Vibration } from '@ionic-native/vibration';
 
 //import { AuthService } from '../providers/auth';
 
@@ -19,6 +20,8 @@ import { TeamsPage } from '../pages/admin/setup/teams/teams';
 import { PlayersPage } from '../pages/admin/setup/players/players';
 import { SeasonsPage } from '../pages/admin/setup/seasons/seasons';
 import { TabsPage } from '../pages/admin/setup/tabs/tabs';
+
+
 
 //import { TeamPage } from '../pages/admin/team/team';
 //import { GamePage } from '../pages/admin/game/game';
@@ -70,6 +73,7 @@ import { MyApp } from './app.component';
   //  AuthService,
     StatusBar,
     SplashScreen,
+    Vibration,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
