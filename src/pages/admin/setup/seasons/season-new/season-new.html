@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Season</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #sf="ngForm" (ngSubmit)="saveNewSeason(sf)">
+      <ion-list>
+        <ion-item>
+            <ion-label color="primary" stacked>Season name:</ion-label> 
+            <ion-input ngModel name="nameSeason" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Season year:</ion-label> 
+            <ion-datetime ngModel displayFormat="MM/DD/YYYY"  name="dateSeason"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Season text:</ion-label> 
+            <ion-input ngModel type="text"  name="textSeason"></ion-input >
+        </ion-item>
+      </ion-list>
+       
+
+        <button ion-button block color="secondary"  ion-button type="submit">Save</button>
+        <button ion-button 
+        icon-only
+        type="submit" block color="primary" (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon> Back</button>
+        </form>
+</ion-content>

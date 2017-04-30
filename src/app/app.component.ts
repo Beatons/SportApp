@@ -25,7 +25,7 @@ import { TabsPage } from "../pages/admin/setup/tabs/tabs";
 
 export class MyApp {
   @ViewChild('nav') nav: NavController;
-  rootPage: any = AdminPage;
+  rootPage: any = LoginPage;
 
 pages: Array<{title:string, component:any, icon: string}>;
 
@@ -33,8 +33,8 @@ pages: Array<{title:string, component:any, icon: string}>;
     this.initializeApp();
       this.pages = [
       { title: 'Home', component: AdminPage, icon: 'home' },
-      { title: 'Start game', component: StartGamePage, icon: 'play' },
       { title: 'Setup', component: TabsPage,  icon: 'clipboard' }, 
+      { title: 'Start game', component: StartGamePage, icon: 'play' },
       { title: 'Scores', component: ScoresPage, icon: 'list' },
       { title: 'Settings', component: SettingsPage, icon: 'settings' }
       

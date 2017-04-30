@@ -20,7 +20,10 @@ import { TeamsPage } from '../pages/admin/setup/teams/teams';
 import { PlayersPage } from '../pages/admin/setup/players/players';
 import { SeasonsPage } from '../pages/admin/setup/seasons/seasons';
 import { TabsPage } from '../pages/admin/setup/tabs/tabs';
+import { SeasonPage } from '../pages/admin/setup/seasons/season/season';
 
+import { GenService } from "../services/gen";
+import { SeasonNewPage } from "../pages/admin/setup/seasons/season-new/season-new";
 
 
 //import { TeamPage } from '../pages/admin/team/team';
@@ -43,7 +46,10 @@ import { MyApp } from './app.component';
     PlayersPage,
     SeasonsPage,
     TeamsPage,
-    TabsPage
+    TabsPage,
+    TabsPage,
+    SeasonNewPage,
+    SeasonPage
   ],
   imports: [
     BrowserModule,
@@ -67,13 +73,18 @@ import { MyApp } from './app.component';
     PlayersPage,
     SeasonsPage,
     TeamsPage,
-    TabsPage
+    TabsPage,
+    TabsPage,
+    SeasonNewPage,
+    SeasonPage
   ],
   providers: [
   //  AuthService,
+    GenService,
     StatusBar,
     SplashScreen,
     Vibration,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

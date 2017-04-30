@@ -6,13 +6,71 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-toolbar color="dark">
     <ion-title>Seasons</ion-title>
-  </ion-navbar>
+
+    <ion-buttons end>
+     <button icon-only ion-button menuToggle><ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
+<ion-list>
+  <button icon-only ion-item color="primary"
+  (click)="addNewSeason()">
+  <ion-icon item-left name="add"></ion-icon>
+   <h2> Create new season </h2>
+  </button>
+      <button ion-item *ngFor='let season of seasons' 
+      color="light"
+        (click)='onViewSeason(season)'>
+        <ion-row>
+          <ion-col>
+          <h3> {{ season.nameSeason }}</h3>
+          <p> {{ season.textSeason }}</p>
+          </ion-col>
+          <ion-col>
+            <p>{{ season.dateSeason }}</p>
+          </ion-col>
+        </ion-row>
+          
+          
+      </button>
+  </ion-list>
 
+<!--  <ion-list>
+    <ion-item color="light">
+    <h3>Red team</h3>
+    <p>  Mid-jutland UFC KFC MFK</p>
+    </ion-item>
+     <ion-item color="light">
+    <h3>Red team</h3>
+    <p>  Mid-jutland UFC KFC MFK</p>
+    </ion-item>
+  </ion-list>
+<ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      Red Team
+      </ion-card-title>
+    <p>
+        Mid-jutland UFC KFC MFK
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      Blue Team
+      </ion-card-title>
+    <p>
+        Mid-jutland UFC KFC MFK
+    </p>
+  </ion-card-content>
+</ion-card>-->
+  
 </ion-content>
