@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import  { ITimer } from './itimer';
 import { Vibration } from '@ionic-native/vibration';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-start-game',
@@ -12,7 +13,7 @@ export class StartGamePage {
  @Input() timeInSeconds: number;
     public timer: ITimer;
  
-    constructor(public vibration: Vibration) {
+    constructor(public vibration: Vibration, private alertCtrl: AlertController) {
     }
  
     ngOnInit() {
@@ -35,6 +36,28 @@ export class StartGamePage {
         };
  
         this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsPassed);
+    }
+
+    AreSureToReset(){
+        const alert = this.alertCtrl.create({
+  subTitle: 'Want to restart?',
+  message:'Are you sure want to reset the timer?',
+  buttons:[{
+    text:"Yes",
+    handler:()=>{
+      this.initTimer();
+    }
+  },
+  {
+    text:"No",
+    role:'cancel',
+    handler:()=>{
+      console.log("Cancelled!");
+    }
+  }]
+});
+
+alert.present();
     }
  
     startTimer() {
