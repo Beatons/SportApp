@@ -1,5 +1,9 @@
 page-start-game {
 
+  
+   
+  
+
  .timer-button {
     font-size: 3rem !important;
     height: 1em !important;
@@ -8,5 +12,38 @@ page-start-game {
   
   .no-bottom-border.item .item-inner {
       border-bottom: none !important;
+  }
+
+.bg{
+  background-color: black;
+}
+
+  .score{
+    font-size:65px;
+  }
+
+  .moveLeft{
+    position: relative;
+    left: -20%;
+  }
+
+  .moveRight{
+    position:relative;
+    right:-20%;
+  }
+
+  .IconRight{
+    position:relative;
+    right:-10%;
+  }
+
+  .t-shirt{
+   font-size:110px;
+  }
+
+  .img-shirt{
+    width:115px;height:100px;
+    @extend .IconRight;
+    filter: invert(85%);
   }
 }

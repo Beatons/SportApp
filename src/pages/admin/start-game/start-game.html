@@ -42,9 +42,60 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="bg" padding>
 
 
- <h2>TIME COUNT</h2>
+<ion-card color="dark">
+   <ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <p class="moveRight" text-center>TEAM1</p>
+        </ion-col>
+        <ion-col col-4>
+        <p text-center>vs</p>
+        </ion-col>
+        <ion-col col-4>
+          <p class="moveLeft" text-center>TEAM2</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <p class="score" text-center>0</p>
+        </ion-col>
+       
+        <ion-col col-6>
+          <p class="score" text-center>0</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+           
+             <div (click)="goToPlayers()">
+
+             <img class="" src="../../../assets/images/fullset-color.svg">
+        
+             </div>
+           
+        </ion-col>
+
+          <ion-col col-6>
+            
+            <img class="" src="../../../assets/images/fullset-color-red.svg">
+           
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+
+</ion-card>
+  
+
 
 </ion-content>

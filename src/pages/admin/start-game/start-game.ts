@@ -1,7 +1,9 @@
+import { NavController } from 'ionic-angular';
 import { Component, Input } from '@angular/core';
 import  { ITimer } from './itimer';
 import { Vibration } from '@ionic-native/vibration';
 import { AlertController } from 'ionic-angular';
+import { PlayersPage } from '../setup/players/players';
 
 @Component({
   selector: 'page-start-game',
@@ -13,7 +15,7 @@ export class StartGamePage {
  @Input() timeInSeconds: number;
     public timer: ITimer;
  
-    constructor(public vibration: Vibration, private alertCtrl: AlertController) {
+    constructor(public vibration: Vibration, private alertCtrl: AlertController, private navCtrl: NavController) {
     }
  
     ngOnInit() {
@@ -25,7 +27,7 @@ export class StartGamePage {
     }
  
     initTimer() {
-        if(!this.timeInSeconds) { this.timeInSeconds = 0.001; }
+        if(!this.timeInSeconds) { this.timeInSeconds = 1800 ; }
  
         this.timer = <ITimer>{
             seconds: this.timeInSeconds,
@@ -79,7 +81,7 @@ alert.present();
     timerTick() {
         setTimeout(() => {
             if (!this.timer.runTimer) { return; }
-            this.timer.secondsPassed++;
+            this.timer.secondsPassed--;
             this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsPassed);
             if (this.timer.secondsPassed > 0) {
                 this.timerTick();
@@ -102,6 +104,10 @@ alert.present();
         minutesString = (minutes < 10) ? "0" + minutes : minutes.toString();
         secondsString = (seconds < 10) ? "0" + seconds : seconds.toString();
         return hoursString + ':' + minutesString + ':' + secondsString;
+    }
+
+    goToPlayers(){
+       this.navCtrl.push(PlayersPage);
     }
 
 }
