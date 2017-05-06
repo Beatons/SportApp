@@ -1,0 +1,67 @@
+<ion-list>
+      <ion-list-header text-center>Stats</ion-list-header>
+      <ion-row>
+          <ion-col>
+              <div>
+              <img class="" src="../../../assets/images/shirt-blue.svg">
+              </div>
+                  <div class="number-pos">15</div>
+          </ion-col>
+      </ion-row>
+      <ion-grid>
+          <ion-row>
+              <ion-col text-center> 
+                  <div class="player-name">John Doe</div>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-8>
+      <ion-item>Score:</ion-item>
+              </ion-col>
+              <ion-col col-4>
+                 
+                  <ion-item>
+                  <ion-input focus type="number" value="{{count}}"></ion-input>
+                  </ion-item>
+                  
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-6 text-center>
+                  <button ion-button color="danger" (click)="MinusIt()">
+                            <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+                    </button>
+               
+              </ion-col>
+              <ion-col col-6 text-center>
+                     <button ion-button (click)="AddIt()">
+                            <ion-icon ios="ios-add" md="md-add"></ion-icon>
+                    </button>
+              </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-8>
+      <ion-item>Penalties:</ion-item>
+            </ion-col>
+            <ion-col col-4>
+                  <ion-item>
+                  <ion-input  type="number" value="0"></ion-input>
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+
+           <ion-row>
+              <ion-col col-8>
+      <ion-item>Assists:</ion-item>
+              </ion-col>
+              <ion-col col-4>
+                  <ion-item>
+                  <ion-input  type="number" value="0"></ion-input>
+                  </ion-item>
+              </ion-col>
+           </ion-row>
+          
+      </ion-grid>
+
+    </ion-list>

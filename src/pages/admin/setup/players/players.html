@@ -21,4 +21,100 @@
 
 <ion-content padding>
 
+<ion-grid *ngIf="!ClickedBlue">
+<ion-list>
+  <ion-list-header text-center>
+    Active Players
+  </ion-list-header>
+  <ion-item>
+
+    <ion-row>
+    <ion-col col-4><button style="background-color: transparent" (click)="presentPopover()">
+      <div class="number-parent">
+        <img class="" src="../../../assets/images/shirt-blue.svg">
+        </div>
+        </button>
+        <div class="number-pos">15</div>
+        </ion-col>
+
+           <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+                 <div class="number-parent">
+                   <img class="" src="../../../assets/images/shirt-blue.svg">
+                 </div>
+                         </button>
+                <div class="number-pos">27</div>
+                </ion-col>
+
+
+         <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+                 <div class="number-parent">
+                    <img class="" src="../../../assets/images/shirt-blue.svg">
+                </div>
+                       </button>
+                   <div class="number-pos">33</div>
+                   </ion-col>
+     </ion-row>
+  </ion-item>
+
+  <ion-item>
+   <ion-row>
+    <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+      <div class="number-parent">
+        <img class="" src="../../../assets/images/shirt-blue.svg">
+        </div>
+        </button>
+        <div class="number-pos">17</div>
+        </ion-col>
+
+        <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+            <div class="number-parent">
+                <img class="" src="../../../assets/images/shirt-blue.svg">
+            </div>
+                         </button>
+                <div class="number-pos">49</div>
+                </ion-col>
+
+              <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+                 <div class="number-parent">
+                    <img class="" src="../../../assets/images/shirt-blue.svg">
+                       </div>
+                          </button>
+                   <div class="number-pos">69</div>
+                   </ion-col>
+     </ion-row>
+  </ion-item>
+  <ion-item>
+<ion-row>
+    <ion-col col-4><button style="background-color: transparent"  (click)="presentPopover()">
+      <div class="number-parent">
+        <img class="" src="../../../assets/images/shirt-blue.svg">
+        </div>
+        </button>
+        <div class="number-pos">23</div>
+        </ion-col>
+
+     </ion-row>
+  </ion-item>
+</ion-list>
+  
+</ion-grid>
+
+<ion-grid *ngIf="ClickedRed">
+
+  <ion-row>
+    <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+        <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+            <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+        <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+            <ion-col col-4><img class="" src="../../../assets/images/shirt-red.svg"></ion-col>
+  </ion-row>
+     <ion-row>
+    <ion-col col-4><img class="shirt-size" src="../../../assets/images/shirt-red.svg"></ion-col>
+        
+  </ion-row>
+
+</ion-grid>
 </ion-content>

@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { AdminPage } from '../pages/admin/admin';
-import { StartGamePage } from "../pages/admin/start-game/start-game";
+import { StartGamePage } from '../pages/admin/start-game/start-game';
 //import { SetupPage } from "../pages/admin/setup/setup";
 import { ScoresPage } from "../pages/admin/scores/scores";
 import { SettingsPage } from "../pages/admin/settings/settings";
@@ -25,7 +25,7 @@ import { TabsPage } from "../pages/admin/setup/tabs/tabs";
 
 export class MyApp {
   @ViewChild('nav') nav: NavController;
-  rootPage: any = LoginPage;
+  rootPage: any = StartGamePage;
 
 pages: Array<{title:string, component:any, icon: string}>;
 

@@ -106,8 +106,21 @@ alert.present();
         return hoursString + ':' + minutesString + ':' + secondsString;
     }
 
-    goToPlayers(){
+
+
+      public ClickedBlue:boolean = false;
+    goToPlayersBlue(){
        this.navCtrl.push(PlayersPage);
+       this.ClickedBlue = !this.ClickedBlue;
+    }
+
+
+
+ 
+
+     goToPlayersRed(){
+       this.navCtrl.push(PlayersPage);
+        
     }
 
 }

@@ -32,6 +32,7 @@ import { SeasonNewPage } from "../pages/admin/setup/seasons/season-new/season-ne
 
 
 import { MyApp } from './app.component';
+import { PopoverPage } from '../pages/admin/setup/popover/popover';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MyApp } from './app.component';
     TabsPage,
     TabsPage,
     SeasonNewPage,
-    SeasonPage
+    SeasonPage,
+    PopoverPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,8 @@ import { MyApp } from './app.component';
     TabsPage,
     TabsPage,
     SeasonNewPage,
-    SeasonPage
+    SeasonPage,
+    PopoverPage
   ],
   providers: [
   //  AuthService,
