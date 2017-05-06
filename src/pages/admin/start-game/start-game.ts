@@ -5,6 +5,8 @@ import { Vibration } from '@ionic-native/vibration';
 import { AlertController } from 'ionic-angular';
 import { PlayersPage } from '../setup/players/players';
 
+
+
 @Component({
   selector: 'page-start-game',
   templateUrl: 'start-game.html',
@@ -108,19 +110,15 @@ alert.present();
 
 
 
-      public ClickedBlue:boolean = false;
+      
     goToPlayersBlue(){
        this.navCtrl.push(PlayersPage);
-       this.ClickedBlue = !this.ClickedBlue;
+  
     }
-
-
-
- 
 
      goToPlayersRed(){
        this.navCtrl.push(PlayersPage);
-        
+   
     }
 
 }

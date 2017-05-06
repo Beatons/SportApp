@@ -3,6 +3,8 @@ import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { PopoverPage } from '../popover/popover';
 
 
+
+
 @Component({
   selector: 'page-players',
   templateUrl: 'players.html',
@@ -20,4 +22,29 @@ export class PlayersPage {
 
 }
 
+
+public ClickedBlue:boolean = false;
+public ClickedRed:boolean = false;
+
+onButtonClick(){
+this.setToTrue();
 }
+
+onButtonClickRed(){
+  this.setToTrueRed();
+}
+
+setToTrue(){
+    this.ClickedBlue = !this.ClickedBlue;
+  
+  }
+
+  setToTrueRed(){
+      this.ClickedRed = !this.ClickedRed;
+  }
+
+
+
+}
+
+
