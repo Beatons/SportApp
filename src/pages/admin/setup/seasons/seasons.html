@@ -25,12 +25,12 @@
   <ion-icon item-left name="add"></ion-icon>
    <h2> Create new season </h2>
   </button>
-      <button ion-item *ngFor='let season of seasons' 
+      <button ion-item *ngFor='let season of seasons; let i = index' 
       color="light"
-        (click)='onViewSeason(season)'>
+        (click)='onViewSeason(season, i)'>
         <ion-row>
           <ion-col>
-          <h3> {{ season.nameSeason }}</h3>
+          <h3><strong> {{ season.nameSeason }}</strong></h3>
           <p> {{ season.textSeason }}</p>
           </ion-col>
           <ion-col>
