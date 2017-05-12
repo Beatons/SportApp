@@ -1,9 +1,12 @@
-import { NavController } from 'ionic-angular';
-import { Component, Input } from '@angular/core';
+import { TeamLayerPage } from './team-layer/team-layer';
+import { GenService } from '../../../../services/gen';
+import { NewGame } from '../../../../models/new-game';
+import { NavController, NavParams } from 'ionic-angular';
+import { Component, Input, OnInit } from '@angular/core';
 import  { ITimer } from './itimer';
 import { Vibration } from '@ionic-native/vibration';
 import { AlertController } from 'ionic-angular';
-import { PlayersPage } from '../setup/players/players';
+import { PlayersPage } from '../../setup/players/players';
 
 
 
@@ -11,17 +14,33 @@ import { PlayersPage } from '../setup/players/players';
   selector: 'page-start-game',
   templateUrl: 'start-game.html',
 })
-export class StartGamePage {
-
+export class StartGamePage implements OnInit {
+       // inGame: string;
+    private newGame: NewGame = null;
 
  @Input() timeInSeconds: number;
     public timer: ITimer;
+
  
-    constructor(public vibration: Vibration, private alertCtrl: AlertController, private navCtrl: NavController) {
+    constructor(private genService: GenService, public vibration: Vibration, private alertCtrl: AlertController, private navCtrl: NavController, private navParams: NavParams) {
     }
  
     ngOnInit() {
+        console.log('nginit');
+        this.genService.fetchNewGame().then(
+            (newGame) =>{ 
+            this.newGame = newGame;
+            console.log(this.newGame,"this");
+            console.log(newGame,"without");
+            
+            }
+        );
+        console.log(this.newGame)
         this.initTimer();
+    }
+
+    ionViewWillEnter(){
+       this.newGame = this.genService.loadNewGame();
     }
  
     hasFinished() {
@@ -108,17 +127,9 @@ alert.present();
         return hoursString + ':' + minutesString + ':' + secondsString;
     }
 
-
-
-      
-    goToPlayersBlue(){
-       this.navCtrl.push(PlayersPage);
-  
-    }
-
-     goToPlayersRed(){
-       this.navCtrl.push(PlayersPage);
-   
+     goToPlayers(index: string){
+        console.log(index);
+       this.navCtrl.push(TeamLayerPage, index);
     }
 
 }

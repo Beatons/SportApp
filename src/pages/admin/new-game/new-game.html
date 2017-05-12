@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+    <ion-title>New game</ion-title>
+
+    <ion-buttons end>
+     <button icon-only ion-button menuToggle><ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+ <form #newG="ngForm" (ngSubmit)="startCounting(newG)">
+
+      <ion-list>
+            <ion-list-header>
+              <h2>Match:</h2>
+              </ion-list-header>
+        <ion-item>
+            <ion-label color="primary" stacked>Match name:</ion-label> 
+            <ion-input ngModel name="matchName" type="text"></ion-input>
+        </ion-item>
+     <!--  <button ion-item color="primary"  >Team setup</button> -->
+        <ion-item>
+            <ion-label>Red</ion-label>
+            <ion-checkbox ngModel name="oneTeam" color="danger" checked="true"></ion-checkbox>
+        </ion-item>
+         <ion-item>
+            <ion-label>Blue</ion-label>
+            <ion-checkbox ngModel name="twoTeam" color="primary" checked="true"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+            <ion-list-header>
+              <h2>Match tracking stats:</h2>
+            </ion-list-header>
+              <ion-item>
+                <ion-label>Goals</ion-label>
+                <ion-checkbox ngModel name="trackGoals" color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Penalties</ion-label>
+                <ion-checkbox ngModel name="trackPenalties" color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Tackles</ion-label>
+                <ion-checkbox ngModel name="trackTackles" color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Blocks</ion-label>
+                <ion-checkbox ngModel name="trackBlocks" color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+      </ion-list>
+       
+
+        <button ion-button block color="secondary"  ion-button type="submit">Start game</button>
+     <!--   <button ion-button 
+        icon-only
+        type="submit" block color="primary" (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon> Back</button>-->
+        </form>
+</ion-content>

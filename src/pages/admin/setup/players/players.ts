@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, PopoverController } from 'ionic-angular';
-import { PopoverPage } from '../popover/popover';
+import { Component, OnInit } from '@angular/core';
+import { ModalController, NavController, NavParams } from 'ionic-angular';
+import { Player } from '../../../../models/player';
+import { GenService } from '../../../../services/gen';
+import { PlayerPage } from "./player/player";
+import { PlayerNewPage } from "./player-new/player-new";
 
 
 
@@ -9,41 +12,50 @@ import { PopoverPage } from '../popover/popover';
   selector: 'page-players',
   templateUrl: 'players.html',
 })
-export class PlayersPage {
+export class PlayersPage implements OnInit {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
+players: Player[] = [];
+
+  constructor(private genService: GenService, private modalCtrl: ModalController, private navCtrl: NavController) {
   }
 
-   presentPopover() {
-    let popover = this.popoverCtrl.create(PopoverPage);
-    popover.present({
-      
-    });
+  ngOnInit() {
+   //this.players = [];
+  console.log('nginit');
+   this.genService.fetchPlayers().then(
+     (players: Player[]) =>  
+     this.players = players
+   );
+   console.log(this.players);
+    }
 
-}
-
-
-public ClickedBlue:boolean = false;
-public ClickedRed:boolean = false;
-
-onButtonClick(){
-this.setToTrue();
-}
-
-onButtonClickRed(){
-  this.setToTrueRed();
-}
-
-setToTrue(){
-    this.ClickedBlue = !this.ClickedBlue;
-  
+    ionViewWillEnter() {
+    //this.players = [];
+    this.players = this.genService.loadPlayers();
+  console.log('call once');
+  // this.players = this.genService.getplayers();
+   console.log(this.players);
   }
 
-  setToTrueRed(){
-      this.ClickedRed = !this.ClickedRed;
+   onViewplayer(player: Player, index: number) {
+   const modal = this.modalCtrl.create(PlayerPage, player);
+  modal.present();
+   modal.onDidDismiss((remove: boolean) => {
+    if(remove){
+     this.genService.removePlayer(index);
+      this.players = this.genService.loadPlayers();
+     // const position = this.players.findIndex((playerEl: player) => {
+     //    return index;
+    //});
+    // this.players.splice(position, 1);
+     }
+     console.log(remove,"delete");
+   });
   }
+  addNewPlayer(){
+  this.navCtrl.push(PlayerNewPage);
 
-
+}
 
 }
 

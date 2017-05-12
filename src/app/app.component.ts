@@ -4,11 +4,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { AdminPage } from '../pages/admin/admin';
-import { StartGamePage } from '../pages/admin/start-game/start-game';
+import { StartGamePage } from '../pages/admin/new-game/start-game/start-game';
 //import { SetupPage } from "../pages/admin/setup/setup";
 import { ScoresPage } from "../pages/admin/scores/scores";
 import { SettingsPage } from "../pages/admin/settings/settings";
 import { TabsPage } from "../pages/admin/setup/tabs/tabs";
+import { NewGamePage } from '../pages/admin/new-game/new-game';
 
 //import { Page } from '../pages/admin/admin';
 //import { AuthService } from '../providers/auth';
@@ -25,7 +26,7 @@ import { TabsPage } from "../pages/admin/setup/tabs/tabs";
 
 export class MyApp {
   @ViewChild('nav') nav: NavController;
-  rootPage: any = StartGamePage;
+  rootPage: any = LoginPage;
 
 pages: Array<{title:string, component:any, icon: string}>;
 
@@ -34,7 +35,7 @@ pages: Array<{title:string, component:any, icon: string}>;
       this.pages = [
       { title: 'Home', component: AdminPage, icon: 'home' },
       { title: 'Setup', component: TabsPage,  icon: 'clipboard' }, 
-      { title: 'Start game', component: StartGamePage, icon: 'play' },
+      { title: 'Start game', component: NewGamePage, icon: 'play' },
       { title: 'Scores', component: ScoresPage, icon: 'list' },
       { title: 'Settings', component: SettingsPage, icon: 'settings' }
       

@@ -1,3 +1,4 @@
+import { MyApp } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -11,19 +12,30 @@ import { Vibration } from '@ionic-native/vibration';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/login/register/register';
-import { StartGamePage } from '../pages/admin/start-game/start-game';
+import { GenService } from "../services/gen";
+
 import { AdminPage } from '../pages/admin/admin';
+
+import { NewGamePage } from '../pages/admin/new-game/new-game';
+import { StartGamePage } from '../pages/admin/new-game/start-game/start-game';
+import { PopoverPage } from '../pages/admin/new-game/start-game/popover/popover';
+import { TeamLayerPage } from '../pages/admin/new-game/start-game/team-layer/team-layer';
+
+
 import { ScoresPage } from '../pages/admin/scores/scores';
 import { SetupPage } from '../pages/admin/setup/setup';
 import { SettingsPage } from '../pages/admin/settings/settings';
+
 import { TeamsPage } from '../pages/admin/setup/teams/teams';
 import { PlayersPage } from '../pages/admin/setup/players/players';
 import { SeasonsPage } from '../pages/admin/setup/seasons/seasons';
 import { TabsPage } from '../pages/admin/setup/tabs/tabs';
-import { SeasonPage } from '../pages/admin/setup/seasons/season/season';
 
-import { GenService } from "../services/gen";
+import { SeasonPage } from '../pages/admin/setup/seasons/season/season';
 import { SeasonNewPage } from "../pages/admin/setup/seasons/season-new/season-new";
+
+import { PlayerPage } from '../pages/admin/setup/players/player/player';
+import { PlayerNewPage } from "../pages/admin/setup/players/player-new/player-new";
 
 
 //import { TeamPage } from '../pages/admin/team/team';
@@ -31,8 +43,6 @@ import { SeasonNewPage } from "../pages/admin/setup/seasons/season-new/season-ne
 //import { NewseasonPage } from '../pages/admin/season/newseason/newseason';
 
 
-import { MyApp } from './app.component';
-import { PopoverPage } from '../pages/admin/setup/popover/popover';
 
 
 @NgModule({
@@ -52,16 +62,17 @@ import { PopoverPage } from '../pages/admin/setup/popover/popover';
     TabsPage,
     SeasonNewPage,
     SeasonPage,
-    PopoverPage
+    PopoverPage,
+    NewGamePage,
+    TeamLayerPage,
+    PlayerNewPage,
+    PlayerPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot({
-      name: 'offDB',
-      driverOrder: ['indexeddb','sqlite','websql']
-    })
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -80,7 +91,11 @@ import { PopoverPage } from '../pages/admin/setup/popover/popover';
     TabsPage,
     SeasonNewPage,
     SeasonPage,
-    PopoverPage
+    PopoverPage,
+    NewGamePage,
+    TeamLayerPage,
+    PlayerNewPage,
+    PlayerPage
   ],
   providers: [
   //  AuthService,
