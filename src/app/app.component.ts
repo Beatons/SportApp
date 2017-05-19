@@ -10,7 +10,8 @@ import { ScoresPage } from "../pages/admin/scores/scores";
 import { SettingsPage } from "../pages/admin/settings/settings";
 import { TabsPage } from "../pages/admin/setup/tabs/tabs";
 import { NewGamePage } from '../pages/admin/new-game/new-game';
-
+import { HistoryPage } from '../pages/admin/history/history';
+import { TeamBluePlayersPage } from '../pages/admin/history/team-blue-players/team-blue-players';
 //import { Page } from '../pages/admin/admin';
 //import { AuthService } from '../providers/auth';
 //import { SeasonPage } from '../pages/admin/season/season';
@@ -21,6 +22,7 @@ import { NewGamePage } from '../pages/admin/new-game/new-game';
 
 
 @Component({
+  selector: 'page-app',
   templateUrl: 'app.html'
 })
 
@@ -38,6 +40,7 @@ pages: Array<{title:string, component:any, icon: string}>;
       { title: 'Start game', component: NewGamePage, icon: 'play' },
       { title: 'Scores', component: ScoresPage, icon: 'list' },
       { title: 'Settings', component: SettingsPage, icon: 'settings' }
+      
       
       
     ];

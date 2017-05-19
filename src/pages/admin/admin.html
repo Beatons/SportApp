@@ -20,9 +20,65 @@
 <ion-content class="page-front" padding>
 
    <ion-list>
-     <button ion-item (click)="newSeason()">
-       My last matches
-     </button>
+    <!-- <button ion-item (click)="newSeason()">
+     
+     </button> -->
+
+  
+
+
+     <ion-searchbar></ion-searchbar> <!-- insert this in ion-searchbar tag -> (ionInput)="getItems($event)"  -->
+
+        <p style="color:#fff; font-size:24px;" text-center>  History </p>
+
+<ion-list>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game1
+      <ion-note item-right>
+        16/05/2017
+      </ion-note>
+  </ion-item>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game2
+      <ion-note item-right>
+       15/05/2017
+      </ion-note>
+  </ion-item>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game3
+      <ion-note item-right>
+        07/08/2017
+      </ion-note>
+  </ion-item>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game4
+      <ion-note item-right>
+        04/12/2016
+      </ion-note>
+  </ion-item>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game5
+      <ion-note item-right>
+        03/07/2016
+      </ion-note>
+  </ion-item>
+  <ion-item (click)="goToHistory()" color="my">
+    <ion-icon name="football" item-left></ion-icon>
+      Game6
+      <ion-note item-right>
+       23/06/2016
+      </ion-note>
+  </ion-item>
+</ion-list>
+
+
+
+
    <!--<button ion-button class="" (click)="logout()">Logout
     </button>-->
 

@@ -1,0 +1,22 @@
+page-popover {
+
+.player-name{
+    font-size:24px;
+}
+
+.number-parent{
+    position:relative;
+}
+.number-pos{
+    position: absolute;
+    top: 28%;
+    left: 40.5%;
+    color: white;
+    font-size: 38px;
+}
+
+}
+
+table{width: 100%; border: solid 1px #ccc; border-collapse: collapse;}
+th{background: #ccc; color: #777; text-transform: uppercase;}
+th,td{border: solid 1px #ccc; padding: 10px 20px;}

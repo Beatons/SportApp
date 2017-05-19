@@ -48,7 +48,7 @@ export class StartGamePage implements OnInit {
     }
  
     initTimer() {
-        if(!this.timeInSeconds) { this.timeInSeconds = 1800 ; }
+        if(!this.timeInSeconds) { this.timeInSeconds = 0.001 ; }
  
         this.timer = <ITimer>{
             seconds: this.timeInSeconds,
@@ -102,7 +102,7 @@ alert.present();
     timerTick() {
         setTimeout(() => {
             if (!this.timer.runTimer) { return; }
-            this.timer.secondsPassed--;
+            this.timer.secondsPassed++;
             this.timer.displayTime = this.getSecondsAsDigitalClock(this.timer.secondsPassed);
             if (this.timer.secondsPassed > 0) {
                 this.timerTick();

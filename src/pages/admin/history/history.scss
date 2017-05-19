@@ -1,0 +1,22 @@
+.page-history {
+background-color:#333;
+color:#fff;
+}
+
+
+
+table{width: 100%; border: solid 1px #ccc; border-collapse: collapse;}
+th{background: #ccc; color: #777; text-transform: uppercase;}
+th,td{border: solid 1px #ccc; padding: 10px 20px;}
+
+/*----- Responsive styles -----*/
+
+
+.item-md p {
+font-size: 1.3rem;
+    white-space: nowrap;
+    width: 180px;
+    color: #a6a6a6;
+}
+
+

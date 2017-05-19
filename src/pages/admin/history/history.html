@@ -1,0 +1,85 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+      <ion-navbar>   
+    <ion-title text-center>Team blue 1-0 Team red</ion-title>
+</ion-navbar>
+    <ion-buttons end>
+     <button icon-only ion-button menuToggle><ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+ 
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+
+<ion-content padding class="page-history">
+<h3 text-center>Game1 - 16/05/2017</h3>
+<p text-center> Match Summary</p>
+
+<div>
+<ion-list>
+  <ion-item style="background-color:#4d4d4d;color:#fff;" class="custom" (click)="gotoblueplayers()">
+    <ion-thumbnail item-left>
+      <img src="https://s3.amazonaws.com/ionic-io-static/UOXNkNWdQ3ilR6LIDXKZ_shirt-blue.svg">
+    </ion-thumbnail>
+    <h2>Team Blue</h2>
+    <p>Click here to show players</p>
+    <button ion-button clear item-right color="light">
+           <ion-icon style="font-size:28px;" name="arrow-forward"></ion-icon>
+    </button>
+  </ion-item>
+</ion-list>
+<div style="margin-top:-16px;">
+        <table>
+  <tbody>
+    <tr>
+      <td text-center>GOALS</td>
+      <td text-center>SHOTS</td>
+      <td text-center>PENALTIES</td>
+    </tr>
+    <tr>
+      <td text-center>7</td>
+      <td text-center>16</td>
+      <td text-center>2</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<br>
+
+<ion-list>
+  <ion-item style="background-color:#4d4d4d;color:#fff;" class="custom" (click)="gotoredplayers()">
+    <ion-thumbnail item-left>
+      <img src="https://s3.amazonaws.com/ionic-io-static/Xq9IzfekTU2htRnxJTgW_shirt-red.svg">
+    </ion-thumbnail>
+    <h2>Team Red</h2>
+    <p>Click here to show players</p>
+    <button ion-button clear item-right color="light">
+           <ion-icon style="font-size:28px;" name="arrow-forward"></ion-icon>
+    </button>
+  </ion-item>
+</ion-list>
+<div style="margin-top:-16px;">
+ <table>
+  <tbody>
+    <tr>
+      <td text-center>GOALS</td>
+      <td text-center>SHOTS</td>
+      <td text-center>PENALTIES</td>
+    </tr>
+    <tr>
+      <td text-center>12</td>
+      <td text-center>19</td>
+      <td text-center>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+</ion-content>

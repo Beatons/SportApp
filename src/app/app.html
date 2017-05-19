@@ -7,13 +7,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="page-app">
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button style="background-color:#4d4d4d;
+    color:#fff;" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon [name]="p.icon" item-left></ion-icon>
         <h2>{{p.title}}</h2>
       </button>
-      <button menuClose ion-item (click)="logout()">
+      <button style="background-color:#4d4d4d;
+    color:#fff;" menuClose ion-item (click)="logout()">
          <ion-icon name="log-out" item-left></ion-icon>
          <h2>Logout</h2>
       </button>

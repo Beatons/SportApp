@@ -41,6 +41,10 @@ import { PlayerNewPage } from "../pages/admin/setup/players/player-new/player-ne
 //import { TeamPage } from '../pages/admin/team/team';
 //import { GamePage } from '../pages/admin/game/game';
 //import { NewseasonPage } from '../pages/admin/season/newseason/newseason';
+import { HistoryPage } from '../pages/admin/history/history';
+import { TeamBluePlayersPage } from '../pages/admin/history/team-blue-players/team-blue-players';
+import { TeamRedPlayersPage } from '../pages/admin/history/team-red-players/team-red-players';
+import { PopoverTeamPlayersPage } from '../pages/admin/new-game/start-game/popover/popover-team-players';
 
 
 
@@ -63,10 +67,14 @@ import { PlayerNewPage } from "../pages/admin/setup/players/player-new/player-ne
     SeasonNewPage,
     SeasonPage,
     PopoverPage,
+    PopoverTeamPlayersPage,
     NewGamePage,
     TeamLayerPage,
     PlayerNewPage,
-    PlayerPage
+    PlayerPage,
+    HistoryPage,
+    TeamBluePlayersPage,
+    TeamRedPlayersPage
   ],
   imports: [
     BrowserModule,
@@ -92,10 +100,14 @@ import { PlayerNewPage } from "../pages/admin/setup/players/player-new/player-ne
     SeasonNewPage,
     SeasonPage,
     PopoverPage,
+    PopoverTeamPlayersPage,    
     NewGamePage,
     TeamLayerPage,
     PlayerNewPage,
-    PlayerPage
+    PlayerPage,
+    HistoryPage,
+    TeamBluePlayersPage,
+    TeamRedPlayersPage
   ],
   providers: [
   //  AuthService,
