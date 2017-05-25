@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 import { Vibration } from '@ionic-native/vibration';
 
-//import { AuthService } from '../providers/auth';
+import { AuthService } from '../providers/auth';
 
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/login/register/register';
@@ -110,7 +110,7 @@ import { PopoverTeamPlayersPage } from '../pages/admin/new-game/start-game/popov
     TeamRedPlayersPage
   ],
   providers: [
-  //  AuthService,
+    AuthService,
     GenService,
     StatusBar,
     SplashScreen,

@@ -1,3 +1,4 @@
+import { AuthService } from '../providers/auth';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -32,7 +33,7 @@ export class MyApp {
 
 pages: Array<{title:string, component:any, icon: string}>;
 
-  constructor(public platform: Platform, private menuCtrl: MenuController,  public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, private menuCtrl: MenuController,  public statusBar: StatusBar, public splashScreen: SplashScreen, private authservice: AuthService) {
     this.initializeApp();
       this.pages = [
       { title: 'Home', component: AdminPage, icon: 'home' },
@@ -60,7 +61,7 @@ pages: Array<{title:string, component:any, icon: string}>;
     this.nav.setRoot(page.component);
   }
     logout() {
-   // this.authservice.logout();
+    this.authservice.logout();
     this.nav.setRoot(LoginPage);
   }
 }

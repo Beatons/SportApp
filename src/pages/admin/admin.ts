@@ -17,8 +17,8 @@ export class AdminPage {
   email = '';
   picture = '';
   searchQuery: string = '';
-  items: string[];
-  games: Array<{title:string, icon: string}>;
+  items: Array<{title:string, date: string}>; // string[];
+
 
   constructor(public menuCtrl: MenuController, public navCtrl: NavController, public alertCtrl: AlertController) {
 
@@ -40,11 +40,15 @@ goToHistory(){
 
    initializeItems() {
     this.items = [
-      'Game1',
-      'Game2',
-      'Game3',
-      'Game4',
-      'Game5',
+      { title: 'Game1', date: '16/05/2017'},
+      { title: 'Game2', date: '15/05/2017'},
+      { title: 'Game3', date: '07/08/2017'},
+      { title: 'Game4', date: '04/12/2016'},
+      { title: 'Game5', date: '03/07/2016'},
+      { title: 'Game6', date: '23/06/2016'},
+      { title: 'Game7', date: '15/05/2017'},
+      { title: 'Game8', date: '15/05/2017'}
+     
     ];
   }
 
@@ -58,7 +62,7 @@ goToHistory(){
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return (item.date.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
