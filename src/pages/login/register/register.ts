@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-//import { AuthService } from '../../../providers/auth';
+import { AuthService } from '../../../providers/auth';
 
 @Component({
   selector: 'page-register',
@@ -13,10 +13,10 @@ export class RegisterPage {
             email: '',
             password: ''
   };
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {}
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public authservice: AuthService) {}
 
   register(user) {
-    /* this.authservice.adduser(user).subscribe( data => {
+     this.authservice.adduser(user).subscribe( data => {
         if(data.valid == false){
             let alert = this.alertCtrl.create({
               title:'Oh snap...',
@@ -42,7 +42,7 @@ export class RegisterPage {
             alert.present();
       }
 
-      }); */
+      }); 
             }
       back() {
         this.navCtrl.pop();
